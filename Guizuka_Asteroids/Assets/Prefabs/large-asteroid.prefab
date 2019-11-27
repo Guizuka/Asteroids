@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9051047363014359025}
   - component: {fileID: 9051047363014359029}
   - component: {fileID: 4672323469953376592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: large-asteroid
   m_TagString: Large Asteroid
   m_Icon: {fileID: 0}
