@@ -233,3 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a775a2550ffe2ca45a5561f085ddccd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroy: {fileID: 8300000, guid: e5a07741db580a2458db1b7c627bf8ec, type: 3}
+  smallAsteroid: {fileID: 6424077063666827510, guid: ff4e9f279b234f84ea66d26c307babdc,
+    type: 3}
