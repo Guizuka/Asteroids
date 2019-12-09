@@ -9,6 +9,7 @@ TagManager:
   - Large Asteroid
   - Bullet
   - GameCntr
+  - Medium Asteroid
   layers:
   - Default
   - TransparentFX

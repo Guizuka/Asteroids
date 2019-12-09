@@ -6,6 +6,7 @@ public class AsteroidController : MonoBehaviour
 {
     public AudioClip destroy;
     public GameObject smallAsteroid;
+    public GameObject mediumAsteroid;
 
     private GameController gameController;
 
@@ -39,10 +40,57 @@ public class AsteroidController : MonoBehaviour
             // Destroy the bullet
             Destroy(c.gameObject);
 
+            switch (tag)
+            {
+                case "Large Asteroid":
+                    {
+                        // Spawn medium asteroids
+                        Instantiate(mediumAsteroid,
+                            new Vector3(transform.position.x + .1f,
+                                transform.position.y + .0f, 0),
+                                Quaternion.Euler(0, 0, 120));
+
+                        // Spawn medium asteroids
+                        Instantiate(mediumAsteroid,
+                            new Vector3(transform.position.x + .9f,
+                                transform.position.y - .9f, 0),
+                                Quaternion.Euler(0, 0, 300));
+
+                        gameController.SplitAsteroid(); // +1
+                        break;
+                    }
+
+                case "Medium Asteroid":
+                    {
+                        Instantiate(smallAsteroid,
+                            new Vector3(transform.position.x + .1f,
+                                transform.position.y + .0f, 0),
+                                Quaternion.Euler(0, 0, 180));
+
+                        // Spawn medium asteroids
+                        Instantiate(smallAsteroid,
+                            new Vector3(transform.position.x + .9f,
+                                transform.position.y - .9f, 0),
+                                Quaternion.Euler(0, 0, 0));
+
+                        gameController.SplitAsteroid(); // +1
+                        break;
+                    }
+                case "Small Asteroid":
+                    {
+                        // Just a small asteroid destroyed
+                        gameController.DecrementAsteroids();
+                        break;
+                    }
+
+                
+            }
+
+            /*
             // If large asteroid spawn new ones
             if (tag.Equals("Large Asteroid"))
             {
-                // Spawn small asteroids
+                /* Spawn small asteroids
                 Instantiate(smallAsteroid,
                     new Vector3(transform.position.x - .5f,
                         transform.position.y - .5f, 0),
@@ -68,6 +116,7 @@ public class AsteroidController : MonoBehaviour
                 // Just a small asteroid destroyed
                 gameController.DecrementAsteroids();
             }
+            */
 
             // Play a sound
             AudioSource.PlayClipAtPoint(

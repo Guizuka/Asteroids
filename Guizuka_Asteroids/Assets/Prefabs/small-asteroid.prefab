@@ -49,6 +49,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -171,3 +172,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroy: {fileID: 8300000, guid: e5a07741db580a2458db1b7c627bf8ec, type: 3}
   smallAsteroid: {fileID: 6424077063666827510}
+  mediumAsteroid: {fileID: 8136781545634174859, guid: e02b0de120bce8c4eb978376f194c62f,
+    type: 3}

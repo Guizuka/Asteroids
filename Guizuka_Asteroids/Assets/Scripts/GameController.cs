@@ -124,7 +124,7 @@ public class GameController : MonoBehaviour
         // - big one
         // + 3 little ones
         // = 2
-        asteroidsRemaining += 2;
+        asteroidsRemaining += 1;
 
     }
 
